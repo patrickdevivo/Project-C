@@ -11,11 +11,7 @@
 	var limit = 1000;
 	
 	//arrays to hold data points
-	var euler1 = {label: "Euler's Estimation (dx = .05)", data: []};
-	var euler2 = {label: "Euler's Estimation (dx = .10)", data: []};
-	var euler3 = {label: "Euler's Estimation (dx = .15)", data: []};
-	var euler4 = {label: "Euler's Estimation (dx = .20)", data: []};
-	var euler5 = {label: "Euler's Estimation (dx = .25)", data: []};
+	var euler = {label: "Euler's Estimation", data: []};
 	var graph_f = {label: "Original Function", data: []}; //original function
 	
 	//define two functions: dy/dx as a function of x and y (differential equation) and y as a function of x (original function)
@@ -87,7 +83,7 @@ $(function () {
 	$('#graph').width(width - 50).height(height - 25);	
 	
 	//finally, plot all the data sets (original function and then all euler estimations)
-	$.plot($("#graph"), [ graph_f, euler1, euler2, euler3, euler4, euler5 ], options);
+	$.plot($("#graph"), [ graph_f, euler ], options);
 });
 </script>
 </html>
